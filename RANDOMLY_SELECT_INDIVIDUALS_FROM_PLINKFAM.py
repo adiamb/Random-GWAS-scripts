@@ -16,7 +16,7 @@ def main(famfile, num_ind):
 	n = 0
 	with open(famfile) as infile:
 		for line in infile:
-			if 'FAM' not in line:
+			if 'FAM' not in line: ### unrelated individuals only
 				n += 1
 				fam_dic[n] = line
 		print('PARSED IDS FROM {} INDIVIDUALS'.format(n))
